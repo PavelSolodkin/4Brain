@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>4Brain</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="main">
+    <div class="blank" id="app">
+      <p class="blank__question">Какая книга про Гарри Поттера лучшая?</p>
+      <ul class="blank__answers">
+        <li
+          v-for="(book, index) in books"
+          :key="index"
+          class="blank__answer"
+          @click="book.votes++"
+        >
+          <span v-cloak>
+            {{book.name}}
+            <span class="blank__vote">{{book.votes}}</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://vuejs.org/js/vue.js"></script>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          books: [
+            {
+              name: "...и философский камень",
+              votes: 0,
+            },
+            {
+              name: "...и Тайная комната",
+              votes: 0,
+            },
+            {
+              name: "...и узник Азкабана",
+              votes: 0,
+            },
+            {
+              name: "...и Кубок огня",
+              votes: 0,
+            },
+            {
+              name: "...и Орден Феникса",
+              votes: 0,
+            },
+            {
+              name: "...и Принц-полукровка",
+              votes: 0,
+            },
+            {
+              name: "...и Дары Смерти",
+              votes: 0,
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
