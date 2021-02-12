@@ -3,10 +3,10 @@ Test to 4Brain
 
 ## Функционал
 
-Вёрстка с использованием dvg-графики
+Простейший счётчик
 
 ## Технологии:
 
-HTML; CSS (flexbox); BEM; SVG;
+HTML; CSS (flexbox); BEM; 
 
 ### Link https://pavelsolodkin.github.io/4Brain/
